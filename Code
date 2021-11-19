@@ -1,0 +1,29 @@
+import java.util.Scanner;
+/**
+ *
+ * @author Administrator
+ */
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    Scanner console = new Scanner(System.in); 
+        
+    System.out.print("Please input a web address:"); 
+    String address = console.nextLine();
+    
+    String lowaddress = address.toLowerCase();
+    
+    String heading = lowaddress.substring(0,address.indexOf('.')); 
+    System.out.printf("Heading:  %s\n", heading);
+       
+    String company = lowaddress.substring(address.indexOf('.')+1,address.lastIndexOf('.')); 
+    System.out.printf("Company: %s\n", company); 
+    
+    String extension = lowaddress.substring(address.lastIndexOf('.')+1,address.length()); 
+    System.out.printf("Extension: %s\n", extension); 
+     }
+    
+}
